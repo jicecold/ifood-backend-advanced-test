@@ -9,6 +9,8 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>ifood-test-cloud-registry</module>
+        <module>ifood-test-service-music</module>
+        <module>ifood-test-architecture</module>
     </modules>
     <packaging>pom</packaging>
     <name>ifood-test-parent</name>
@@ -23,11 +25,19 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <org.springframework.cloud.version>Dalston.SR5</org.springframework.cloud.version>
         <org.projectlombok.version>1.16.20</org.projectlombok.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${org.springframework.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
