@@ -1,12 +1,14 @@
-package br.com.jicecold.ifood.core.model.openweathermap;
+package br.com.jicecold.ifood.spatialdata.provider.openweathermap.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
+@Data
 public class Coord {
 
   @JsonProperty("lon")
-  public Double lon;
+  private Double lon;
   @JsonProperty("lat")
-  public Double lat;
+  private Double lat;
 
 }

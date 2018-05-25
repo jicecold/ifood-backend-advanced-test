@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ifood-test-service-music
+    name: ifood-test-service-spatial-data
 
 eureka:
   instance:
@@ -10,5 +10,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 server:
-  context-path: /music
-  port: 9091
+  context-path: /spatial-data
+  port: 9092

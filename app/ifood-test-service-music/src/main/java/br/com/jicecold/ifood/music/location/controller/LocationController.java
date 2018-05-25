@@ -1,4 +1,4 @@
-package br.com.jicecold.ifood.music.location;
+package br.com.jicecold.ifood.music.location.controller;
 
 import br.com.jicecold.ifood.architecture.generic.controller.BaseController;
 import org.springframework.web.bind.annotation.GetMapping;

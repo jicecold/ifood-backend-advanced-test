@@ -1,36 +1,38 @@
-package br.com.jicecold.ifood.core.model.openweathermap;
+package br.com.jicecold.ifood.spatialdata.provider.openweathermap.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import java.util.List;
 
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class OpenWeatherMap {
 
   @JsonProperty("coord")
-  public Coord coord;
+  private Coord coord;
   @JsonProperty("weather")
-  public List<Weather> weather = null;
+  private List<Weather> weather = null;
   @JsonProperty("base")
-  public String base;
+  private String base;
   @JsonProperty("main")
-  public Main main;
+  private Main main;
   @JsonProperty("visibility")
-  public Integer visibility;
+  private Integer visibility;
   @JsonProperty("wind")
-  public Wind wind;
+  private Wind wind;
   @JsonProperty("clouds")
-  public Clouds clouds;
+  private Clouds clouds;
   @JsonProperty("dt")
-  public Integer dt;
+  private Integer dt;
   @JsonProperty("sys")
-  public Sys sys;
+  private Sys sys;
   @JsonProperty("id")
-  public Integer id;
+  private Integer id;
   @JsonProperty("name")
-  public String name;
+  private String name;
   @JsonProperty("cod")
-  public Integer cod;
+  private Integer cod;
 
 }

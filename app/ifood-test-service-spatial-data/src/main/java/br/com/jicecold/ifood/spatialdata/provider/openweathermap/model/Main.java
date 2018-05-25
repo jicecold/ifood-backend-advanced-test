@@ -1,18 +1,20 @@
-package br.com.jicecold.ifood.core.model.openweathermap;
+package br.com.jicecold.ifood.spatialdata.provider.openweathermap.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
+@Data
 public class Main {
 
   @JsonProperty("temp")
-  public Double temp;
+  private Double temp;
   @JsonProperty("pressure")
-  public Integer pressure;
+  private Integer pressure;
   @JsonProperty("humidity")
-  public Integer humidity;
+  private Integer humidity;
   @JsonProperty("temp_min")
-  public Double tempMin;
+  private Double tempMin;
   @JsonProperty("temp_max")
-  public Double tempMax;
+  private Double tempMax;
 
 }

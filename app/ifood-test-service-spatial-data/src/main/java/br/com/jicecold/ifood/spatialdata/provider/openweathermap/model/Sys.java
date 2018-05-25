@@ -1,20 +1,22 @@
-package br.com.jicecold.ifood.core.model.openweathermap;
+package br.com.jicecold.ifood.spatialdata.provider.openweathermap.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
+@Data
 public class Sys {
 
   @JsonProperty("type")
-  public Integer type;
+  private Integer type;
   @JsonProperty("id")
-  public Integer id;
+  private Integer id;
   @JsonProperty("message")
-  public Double message;
+  private Double message;
   @JsonProperty("country")
-  public String country;
+  private String country;
   @JsonProperty("sunrise")
-  public Integer sunrise;
+  private Integer sunrise;
   @JsonProperty("sunset")
-  public Integer sunset;
+  private Integer sunset;
 
 }

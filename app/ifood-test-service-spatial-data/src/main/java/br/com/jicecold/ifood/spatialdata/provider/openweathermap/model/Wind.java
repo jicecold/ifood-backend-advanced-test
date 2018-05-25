@@ -1,4 +1,4 @@
-package br.com.jicecold.ifood.core.model.openweathermap;
+package br.com.jicecold.ifood.spatialdata.provider.openweathermap.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
