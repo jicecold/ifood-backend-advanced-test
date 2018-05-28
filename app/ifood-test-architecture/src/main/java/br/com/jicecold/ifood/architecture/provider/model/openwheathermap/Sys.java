@@ -1,4 +1,4 @@
-package br.com.jicecold.ifood.spatialdata.provider.openweathermap.model;
+package br.com.jicecold.ifood.architecture.provider.model.openwheathermap;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

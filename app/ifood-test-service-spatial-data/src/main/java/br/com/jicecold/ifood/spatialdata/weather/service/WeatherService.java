@@ -1,7 +1,7 @@
 package br.com.jicecold.ifood.spatialdata.weather.service;
 
-import br.com.jicecold.ifood.spatialdata.provider.openweathermap.client.OpenWeatherMapProvider;
-import br.com.jicecold.ifood.spatialdata.provider.openweathermap.model.OpenWeatherMap;
+import br.com.jicecold.ifood.architecture.provider.OpenWeatherMapProvider;
+import br.com.jicecold.ifood.architecture.provider.model.openwheathermap.OpenWeatherMap;
 import br.com.jicecold.ifood.spatialdata.weather.model.WeatherModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

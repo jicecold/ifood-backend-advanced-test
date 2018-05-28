@@ -1,12 +1,11 @@
 package br.com.jicecold.ifood.music;
 
+import br.com.jicecold.ifood.architecture.AbstractServiceApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@EnableDiscoveryClient
 @SpringBootApplication
-public class MusicServiceApplication {
+public class MusicServiceApplication extends AbstractServiceApplication {
   public static void main(String[] args) {
     SpringApplication.run(MusicServiceApplication.class, args);
   }

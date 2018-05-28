@@ -1,6 +1,6 @@
-package br.com.jicecold.ifood.spatialdata.provider.openweathermap.client;
+package br.com.jicecold.ifood.architecture.provider;
 
-import br.com.jicecold.ifood.spatialdata.provider.openweathermap.model.OpenWeatherMap;
+import br.com.jicecold.ifood.architecture.provider.model.openwheathermap.OpenWeatherMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
