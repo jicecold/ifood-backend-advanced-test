@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/ifood-test-architecture" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/ifood-test-cloud-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/ifood-test-commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/ifood-test-service-music" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data" charset="UTF-8" />
+  </component>
+</project>

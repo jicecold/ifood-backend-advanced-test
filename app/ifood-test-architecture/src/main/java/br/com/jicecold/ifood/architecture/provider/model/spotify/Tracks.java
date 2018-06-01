@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Tracks {
+public class  Tracks {
   @JsonProperty("items")
   private List<Item> items = null;
   @JsonProperty("limit")

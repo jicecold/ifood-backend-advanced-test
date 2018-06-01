@@ -2,6 +2,14 @@ spring:
   application:
     name: ifood-test-service-spatial-data
 
+# openweathermap
+openweathermap:
+  name: openweathermap
+  api:
+    url: http://api.openweathermap.org/data/2.5/weather
+    units: metric
+    appid: 3445a9ae08df1a3117ae58bdfa7cda3d
+
 eureka:
   instance:
     prefer-ip-address: true

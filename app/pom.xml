@@ -12,6 +12,8 @@
         <module>ifood-test-cloud-registry</module>
         <module>ifood-test-service-music</module>
         <module>ifood-test-service-spatial-data</module>
+        <module>ifood-test-commons</module>
+        <module>ifood-test-cloud-gateway</module>
     </modules>
     <packaging>pom</packaging>
     <name>ifood-test-parent</name>

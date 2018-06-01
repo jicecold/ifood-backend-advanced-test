@@ -1,8 +1,7 @@
 package br.com.jicecold.ifood.spatialdata.weather.service;
 
-import br.com.jicecold.ifood.architecture.provider.OpenWeatherMapProvider;
-import br.com.jicecold.ifood.architecture.provider.model.openwheathermap.OpenWeatherMap;
-import br.com.jicecold.ifood.spatialdata.weather.model.WeatherModel;
+import br.com.jicecold.ifood.spatialdata.core.provider.openweathermap.OpenWeatherMapProvider;
+import br.com.jicecold.ifood.spatialdata.weather.model.Weather;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,26 +11,11 @@ public class WeatherService {
   @Autowired
   private OpenWeatherMapProvider openWeatherMapProvider;
 
-  public WeatherModel getWeatherByCityName(String name){
-    OpenWeatherMap weatherByCityName = openWeatherMapProvider.getWeatherByCityName(name);
-    return createResponseModel(weatherByCityName);
+  public Weather getWeatherByCityName(String name){
+    return openWeatherMapProvider.findWeatherByCityName(name);
   }
 
-  public WeatherModel getWeatherByCoordinates(String lat, String lon){
-    OpenWeatherMap weatherByCityName = openWeatherMapProvider.getWeatherByCoordinates(lat, lon);
-    return createResponseModel(weatherByCityName);
+  public Weather getWeatherByCoordinates(Double lat, Double lon){
+    return openWeatherMapProvider.findWeatherByCoordinates(lat, lon);
   }
-
-  private WeatherModel createResponseModel(OpenWeatherMap weatherByCityName){
-    return WeatherModel.builder()
-        .cityName(weatherByCityName.getName())
-        .country(weatherByCityName.getSys().getCountry())
-        .temp(weatherByCityName.getMain().getTemp())
-        .tempMax(weatherByCityName.getMain().getTempMax())
-        .tempMin(weatherByCityName.getMain().getTempMin())
-        .latitude(weatherByCityName.getCoord().getLat())
-        .longitude(weatherByCityName.getCoord().getLon())
-        .build();
-  }
-
 }

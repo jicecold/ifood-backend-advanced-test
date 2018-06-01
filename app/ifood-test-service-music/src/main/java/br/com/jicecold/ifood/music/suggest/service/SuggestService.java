@@ -1,36 +1,30 @@
 package br.com.jicecold.ifood.music.suggest.service;
 
-import br.com.jicecold.ifood.architecture.provider.SpotifyProvider;
-import br.com.jicecold.ifood.architecture.provider.model.spotify.AccessToken;
-import br.com.jicecold.ifood.architecture.provider.model.spotify.Search;
+import br.com.jicecold.ifood.commons.music.model.TrackResponseModel;
+import br.com.jicecold.ifood.music.core.provider.spatialdata.SpatialDataProvider;
+import br.com.jicecold.ifood.music.core.provider.spatialdata.model.Weather;
 import br.com.jicecold.ifood.music.suggest.model.LocationRequestParamsFilter;
 import lombok.extern.log4j.Log4j2;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Arrays;
-import java.util.List;
 
 @Log4j2
 @Service
 public class SuggestService {
 
-  private static List<String> MOCK_MUSICS = Arrays.asList("Musica 1", "Musica 2", "Musica 3", "Musica 4", "Musica 5");
+  //@Autowired
+  //private SpotifyProvider spotifyProvider;
 
   @Autowired
-  private SpotifyProvider spotifyProvider;
+  private SpatialDataProvider spatialDataProvider;
 
-  public List<String> suggestByLocation(LocationRequestParamsFilter filter) {
+  public TrackResponseModel suggestByLocation(LocationRequestParamsFilter filter) {
+//    AccessToken accessToken = spotifyProvider.requestAccessToken();
+//    Search search = spotifyProvider.searchTracksByType("rock", accessToken);
+//    return new SearchToTrackConverter().convertFrom(search);
 
-    AccessToken accessToken = spotifyProvider.requestAccessToken();
-    Search search = spotifyProvider.searchTracksByType("rock", accessToken);
-    log.info(search);
+    Weather weather = spatialDataProvider.getWeatherByCityName(filter.getCity());
 
-    if(StringUtils.isNotBlank(filter.getCity())){
-      return MOCK_MUSICS;
-    }
-
-    return MOCK_MUSICS;
+    return TrackResponseModel.builder().build();
   }
 }

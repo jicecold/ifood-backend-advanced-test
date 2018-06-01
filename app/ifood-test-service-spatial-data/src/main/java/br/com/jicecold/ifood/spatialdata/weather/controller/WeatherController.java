@@ -1,7 +1,8 @@
 package br.com.jicecold.ifood.spatialdata.weather.controller;
 
 import br.com.jicecold.ifood.architecture.generic.controller.BaseController;
-import br.com.jicecold.ifood.spatialdata.weather.model.WeatherModel;
+import br.com.jicecold.ifood.commons.spatialdata.model.WeatherResponseModel;
+import br.com.jicecold.ifood.spatialdata.weather.model.Weather;
 import br.com.jicecold.ifood.spatialdata.weather.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,13 +18,19 @@ public class WeatherController extends BaseController {
   private WeatherService weatherService;
 
   @GetMapping("city")
-  public WeatherModel getWeatherByCityName(@RequestParam String name){
-    return weatherService.getWeatherByCityName(name);
+  public WeatherResponseModel<Weather> getWeatherByCityName(@RequestParam String name){
+    WeatherResponseModel<Weather> response = new WeatherResponseModel<>();
+    Weather data = weatherService.getWeatherByCityName(name);
+    response.setData(data);
+    return response;
   }
 
   @GetMapping("coordinates")
-  public WeatherModel getWeatherByCoordinates(@RequestParam String lat,
-                                               @RequestParam String lon){
-    return weatherService.getWeatherByCoordinates(lat, lon);
+  public WeatherResponseModel<Weather> getWeatherByCoordinates(@RequestParam Double lat,
+                                                               @RequestParam Double lon){
+    WeatherResponseModel<Weather> response = new WeatherResponseModel<>();
+    Weather data = weatherService.getWeatherByCoordinates(lat, lon);
+    response.setData(data);
+    return response;
   }
 }

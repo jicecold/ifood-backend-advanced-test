@@ -1,14 +1,11 @@
-package br.com.jicecold.ifood.spatialdata.weather.model;
+package br.com.jicecold.ifood.music.core.provider.spatialdata.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-@AllArgsConstructor
-public class WeatherModel {
-
+public class Weather {
   private String cityName;
   private String country;
   private Double latitude;
@@ -16,5 +13,4 @@ public class WeatherModel {
   private Double temp;
   private Double tempMin;
   private Double tempMax;
-
 }
