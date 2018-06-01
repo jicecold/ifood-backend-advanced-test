@@ -2,7 +2,6 @@ spring:
   application:
     name: ifood-test-service-spatial-data
 
-# openweathermap
 openweathermap:
   name: openweathermap
   api:
@@ -18,5 +17,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 server:
-  context-path: /spatial-data
+  servlet:
+    context-path: /spatial-data
   port: 9092

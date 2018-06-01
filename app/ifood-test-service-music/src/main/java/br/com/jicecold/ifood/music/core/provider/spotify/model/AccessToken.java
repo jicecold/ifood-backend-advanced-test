@@ -1,4 +1,4 @@
-package br.com.jicecold.ifood.architecture.provider.model.spotify;
+package br.com.jicecold.ifood.music.core.provider.spotify.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

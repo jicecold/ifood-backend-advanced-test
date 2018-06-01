@@ -1,6 +1,6 @@
 package br.com.jicecold.ifood.music.suggest.service;
 
-import br.com.jicecold.ifood.music.core.aggregator.MusicWeatherAggregator;
+import br.com.jicecold.ifood.music.suggest.aggregator.MusicWeatherAggregator;
 import br.com.jicecold.ifood.music.suggest.model.LocationRequestFilter;
 import br.com.jicecold.ifood.music.suggest.model.SongsWeather;
 import lombok.extern.log4j.Log4j2;

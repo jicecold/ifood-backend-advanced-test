@@ -17,11 +17,13 @@
     </parent>
 
     <dependencies>
+        <!-- Project Architecture -->
         <dependency>
             <groupId>br.com.jicecold</groupId>
             <artifactId>ifood-test-architecture</artifactId>
-            <version>${parent.version}</version>
         </dependency>
+
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

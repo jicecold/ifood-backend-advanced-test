@@ -1,11 +1,10 @@
-package br.com.jicecold.ifood.music.core.aggregator;
+package br.com.jicecold.ifood.music.suggest.aggregator;
 
-import br.com.jicecold.ifood.architecture.provider.SpotifyProvider;
-import br.com.jicecold.ifood.architecture.provider.model.spotify.AccessToken;
-import br.com.jicecold.ifood.architecture.provider.model.spotify.Search;
 import br.com.jicecold.ifood.music.core.converter.SearchToTrackConverter;
 import br.com.jicecold.ifood.music.core.provider.spatialdata.SpatialDataProvider;
 import br.com.jicecold.ifood.music.core.provider.spatialdata.model.Weather;
+import br.com.jicecold.ifood.music.core.provider.spotify.SpotifyProvider;
+import br.com.jicecold.ifood.music.core.provider.spotify.model.Search;
 import br.com.jicecold.ifood.music.core.strategy.ClassicMusic;
 import br.com.jicecold.ifood.music.core.strategy.PartyMusic;
 import br.com.jicecold.ifood.music.core.strategy.PopMusic;
@@ -21,34 +20,30 @@ import java.util.Objects;
 @Component
 public class MusicWeatherAggregator {
 
-  private final WeatherMusicConfig weatherMusicConfig = WeatherMusicConfig.builder()
-                                                            .add(new ClassicMusic())
-                                                            .add(new PartyMusic())
-                                                            .add(new PopMusic())
-                                                            .add(new RockMusic())
-                                                            .build();
+  private final WeatherMusicConfig weatherMusicConfig;
   @Autowired
   private SpatialDataProvider spatialDataProvider;
-
   @Autowired
   private SpotifyProvider spotifyProvider;
-
   @Autowired
   private SearchToTrackConverter searchToTrackConverter;
 
+  public MusicWeatherAggregator(){
+    this.weatherMusicConfig = WeatherMusicConfig.builder()
+        .add(new ClassicMusic())
+        .add(new PartyMusic())
+        .add(new PopMusic())
+        .add(new RockMusic())
+        .build();
+  }
+
   public SongsWeather suggestByLocation(LocationRequestFilter filter) {
 
-    Weather weather;
-    if(Objects.nonNull(filter.getLatitude()) && Objects.nonNull(filter.getLongitude())){
-      weather = spatialDataProvider.getWeatherByCoodinates(filter.getLatitude(), filter.getLongitude());
-    }else{
-      weather = spatialDataProvider.getWeatherByCityName(filter.getCity());
-    }
+    Weather weather = getWeather(filter);
 
     String genre = weatherMusicConfig.getMusicGenreByTemperature(weather.getTemp());
 
-    AccessToken accessToken = spotifyProvider.requestAccessToken();
-    Search search = spotifyProvider.searchTracksByType(genre, accessToken);
+    Search search = spotifyProvider.searchTracksByMusicalGenre(genre, filter);
 
     return SongsWeather.builder()
         .songs(searchToTrackConverter.createFromList(search.getTracks().getItems()))
@@ -58,5 +53,13 @@ public class MusicWeatherAggregator {
         .latitude(weather.getLatitude())
         .city(weather.getCityName())
         .build();
+  }
+
+  private Weather getWeather(LocationRequestFilter filter) {
+    if(Objects.nonNull(filter.getLatitude()) && Objects.nonNull(filter.getLongitude())){
+      return spatialDataProvider.getWeatherByCoodinates(filter.getLatitude(), filter.getLongitude());
+    }else{
+      return spatialDataProvider.getWeatherByCityName(filter.getCity());
+    }
   }
 }

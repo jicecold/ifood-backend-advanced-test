@@ -1,7 +1,6 @@
 package br.com.jicecold.ifood.music.core.strategy;
 
 import lombok.extern.log4j.Log4j2;
-import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +25,7 @@ public class WeatherMusicConfig {
         .findFirst();
     return strategyOptional.isPresent()
         ? strategyOptional.get().genre()
-        : StringUtils.EMPTY;
+        : "";
   }
 
   public static class Builder {

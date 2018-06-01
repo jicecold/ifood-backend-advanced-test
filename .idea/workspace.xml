@@ -2,36 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83496fa2-69b6-4219-afe0-7b3fcf2c2616" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/ResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/java/br/com/jicecold/ifood/gateway/GatewayCloudApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/aggregator/MusicWeatherAggregator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/ClassicMusic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/PartyMusic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/PopMusic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/RockMusic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/SongsWeather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/SpotifyDataGuard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/SpotifyProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyAccountFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyApiFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyAccountFeignConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyApiFeignConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/interceptor/SpotifyAccountInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/interceptor/SpotifyApiInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/SpotifySearchApiFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-architecture/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-architecture/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/AbstractServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/AbstractServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/RequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/RequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/provider/SpotifyProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/provider/model/spotify/AccessToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/AccessToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/provider/model/spotify/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/provider/model/spotify/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/provider/model/spotify/Tracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/Tracks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ifood-test-cloud-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-cloud-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-commons/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-commons/src/main/java/br/com/jicecold/ifood/commons/generic/model/RequestParamsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/RequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-commons/src/main/java/br/com/jicecold/ifood/commons/generic/model/ResponseModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-commons/src/main/java/br/com/jicecold/ifood/commons/music/model/TrackResponseModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-commons/src/main/java/br/com/jicecold/ifood/commons/spatialdata/model/WeatherResponseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-cloud-registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-cloud-registry/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-cloud-registry/src/main/java/br/com/jicecold/ifood/registry/RegistryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-cloud-registry/src/main/java/br/com/jicecold/ifood/registry/RegistryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/MusicServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/MusicServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/aggregator/MusicWeatherAggregator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/aggregator/MusicWeatherAggregator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/converter/SearchToTrackConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/converter/SearchToTrackConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/SpatialDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/SpatialDataProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/client/SpatialDataClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/client/SpatialDataClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/model/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/model/Weather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/controller/SuggestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/controller/SuggestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/LocationRequestParamsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/LocationRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/service/SuggestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/service/SuggestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/controller/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/model/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/model/Weather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-music/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/SpatialDataServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/SpatialDataServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/client/OpenWeatherMapClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/client/OpenWeatherMapClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/app/target/" />
     <ignored path="$PROJECT_DIR$/app/ifood-test-cloud-registry/target/" />
@@ -47,52 +51,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ifood_backend_advanced_test$MusicServiceApplication.ic" NAME="MusicServiceApplication Coverage Results" MODIFIED="1527836594677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.jicecold.ifood.music.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MusicWeatherAggregator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/aggregator/MusicWeatherAggregator.java">
+      <file leaf-file-name="SpotifyApiFeignClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyApiFeignClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SongsWeather.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/SongsWeather.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PartyMusic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/PartyMusic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#209#210#0" expanded="true" />
-                <element signature="e#230#231#0" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeatherMusicConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="180">
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,58 +71,104 @@
         </entry>
       </file>
       <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="-6">
+              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassicMusic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/ClassicMusic.java">
+      <file leaf-file-name="SpotifyProvider.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/SpotifyProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+            <state relative-caret-position="56">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="28" />
               <folding>
-                <element signature="e#150#151#0" expanded="true" />
-                <element signature="e#178#179#0" expanded="true" />
-                <element signature="e#218#219#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#297#298#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PopMusic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/PopMusic.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="319">
+              <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpotifyDataGuard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/SpotifyDataGuard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-191">
+              <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
               <folding>
-                <element signature="e#205#206#0" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#284#285#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RockMusic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/RockMusic.java">
+      <file leaf-file-name="SpotifyAccountFeignClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyAccountFeignClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="195">
+              <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
               <folding>
-                <element signature="e#147#148#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#205#206#0" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#284#285#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpotifyApiFeignConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyApiFeignConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#604#605#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpotifyAccountInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/interceptor/SpotifyAccountInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpotifyAccountFeignConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyAccountFeignConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpotifyApiInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/interceptor/SpotifyApiInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,6 +189,7 @@
       <find>sour</find>
       <find>weatherByCityName</find>
       <find>package br\.com\.jicecold\.ifood\.spatialdata\.core\.provider\.openweathermap\.client\;\n\nimport br\.com\.jicecold\.ifood\.spatialdata\.core\.provider\.openweathermap\.config\.OpenWeatherMapConfig\;\nimport br\.com\.jicecold\.ifood\.spatialdata\.core\.provider\.openweathermap\.model\.OpenWeatherMap\;\nimport org\.springframework\.cloud\.netflix\.feign\.FeignClient\;\nimport org\.springframework\.web\.bind\.annotation\.GetMapping\;\nimport org\.springframework\.web\.bind\.annotation\.RequestParam\;\n\n\@FeignClient\(name \= \&quot;\$\{openweathermap\.name\}\&quot;\, url \= \&quot;\$\{openweathermap\.api\.url\}\&quot;\,\n    configuration \= OpenWeatherMapConfig\.class\)\npublic interface OpenWeatherMapClient \{\n\n  \@GetMapping\n  OpenWeatherMap search\(\@RequestParam\(name \= \&quot;q\&quot;\) String query\,\n                        \@RequestParam\(name \= \&quot;units\&quot;\) String units\)\;\n\n  \@GetMapping\n  OpenWeatherMap findByCoordinates\(\@RequestParam\(name \= \&quot;lat\&quot;\) Double latitude\,\n                                                  \@RequestParam\(name \= \&quot;lon\&quot;\) Double longitude\,\n                                                  \@RequestParam\(name \= \&quot;units\&quot;\) String units\)\;\n\}\n</find>
+      <find>POST -</find>
     </findStrings>
     <replaceStrings>
       <replace>source</replace>
@@ -184,41 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/client/SpatialDataFeignServiceClient.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/config/FeignConfig.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/provider/OpenWeatherMapProvider.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/AbstractServiceApplication.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/SpatialDataServiceApplication.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/converter/OpenWeatherMapToWeatherConverter.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/client/model/Search.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/client/model/Coord.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/client/model/Sys.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/client/OpenWeatherMapClient.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/converter/OpenWeatherMapConverter.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/client/model/Main.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/OpenWeatherMapProvider.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/config/OpenWeatherMapConfig.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/config/OpenWeatherMapRequestInterceptor.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/OpenWeatherMapProvider.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/client/OpenWeatherMapClient.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/client/SpatialDataProvider.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/MusicServiceApplication.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/java/br/com/jicecold/ifood/gateway/GatewayCloudApplication.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-cloud-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/client/SpatialDataClient.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/service/WeatherService.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-commons/src/main/java/br/com/jicecold/ifood/commons/spatialdata/model/WeatherResponseModel.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-commons/src/main/java/br/com/jicecold/ifood/commons/generic/model/ResponseModel.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/model/Weather.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/model/Weather.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/ResponseModel.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/Music.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/converter/SearchToTrackConverter.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/controller/SuggestController.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/aggregator/MusicAndSpatialDataAggregator.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicalGenre.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicalGenreStrategy.java" />
         <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/MusicParty.java" />
         <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/MusicPop.java" />
         <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicGenre.java" />
@@ -231,10 +213,45 @@
         <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicStrategy.java" />
         <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/SpatialDataProvider.java" />
         <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/controller/WeatherController.java" />
-        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicConfig.java" />
         <option value="$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/SongsWeather.java" />
         <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/aggregator/MusicWeatherAggregator.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/Tracks.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyFeingConfig.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyClient.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyFeignClient.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyAccountsFeingClient.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/AccessRequestBody.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-cloud-registry/pom.xml" />
+        <option value="$PROJECT_DIR$/app/ifood-test-cloud-registry/src/main/java/br/com/jicecold/ifood/registry/RegistryApplication.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/java/br/com/jicecold/ifood/gateway/GatewayCloudApplication.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-cloud-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/app/pom.xml" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/client/SpatialDataClient.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicConfig.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/AbstractServiceApplication.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/MusicServiceApplication.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyAccountInterceptor.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/SpatialDataServiceApplication.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/pom.xml" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/pom.xml" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/client/OpenWeatherMapClient.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/SpotifySearchApiFilter.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/aggregator/MusicWeatherAggregator.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/converter/SearchToTrackConverter.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/RequestFilter.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyApiInterceptor.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/interceptor/SpotifyAccountInterceptor.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/interceptor/SpotifyApiInterceptor.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyApiFeignConfig.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyAccountFeignConfig.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyAccountFeignClient.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyApiFeignClient.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-architecture/pom.xml" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/SpotifyDataGuard.java" />
+        <option value="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/SpotifyProvider.java" />
       </list>
     </option>
   </component>
@@ -268,25 +285,165 @@
             <path>
               <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="ifood-test-cloud-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-architecture" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="ifood-test-cloud-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="ifood-test-cloud-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="ifood-test-cloud-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="spatialdata" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="spatialdata" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="spotify" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="spotify" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="spotify" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="spotify" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="suggest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="suggest" type="462c0819:PsiDirectoryNode" />
+              <item name="aggregator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ifood-backend-advanced-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ifood-test-service-music" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -300,6 +457,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="extract.method.default.visibility" value="private" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2137931" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -308,7 +468,11 @@
       <recent name="br.com.jicecold.ifood.commons" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.jicecold.ifood.music.core.provider.spotify.config" />
       <recent name="br.com.jicecold.ifood.spatialdata.core.client.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,7 +488,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.MusicServiceApplication">
-    <configuration name="GatewayCloudApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayCloudApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.jicecold.ifood.gateway.GatewayCloudApplication" />
       <module name="ifood-test-cloud-gateway" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -387,6 +551,31 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="ifood-test-architeture - [Install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/app/ifood-test-architecture" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
     <configuration name="ifood-test-service-spatial-data maven clean" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -437,14 +626,10 @@
       <item itemvalue="Application.RegistryApplication" />
       <item itemvalue="Application.MusicServiceApplication" />
       <item itemvalue="Application.SpatialDataServiceApplication" />
-      <item itemvalue="Maven.ifood-test-service-spatial-data maven clean" />
       <item itemvalue="Application.GatewayCloudApplication" />
+      <item itemvalue="Maven.ifood-test-architeture - [Install]" />
+      <item itemvalue="Maven.ifood-test-service-spatial-data maven clean" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.GatewayCloudApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -461,7 +646,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -472,23 +656,24 @@
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.39914772" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.4659091" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.44886363" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.34375" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27890626" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.321875" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32954547" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.52272725" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.41477272" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.1984375" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32954547" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -496,223 +681,105 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/aggregator/MusicWeatherAggregator.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>createBasicAuthorizationToken()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/model/Coord.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.17.RELEASE/spring-web-4.3.17.RELEASE.jar!/org/springframework/web/bind/annotation/PostMapping.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="242">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/converter/OpenWeatherMapConverter.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.17.RELEASE/spring-web-4.3.17.RELEASE-sources.jar!/org/springframework/web/bind/annotation/PostMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="167">
+          <caret line="78" column="39" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/model/Main.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.17.RELEASE/spring-web-4.3.17.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="44">
+          <caret line="420" column="11" selection-start-line="420" selection-start-column="11" selection-end-line="420" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/model/Sys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/model/OpenWeatherMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" selection-start-line="5" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/config/OpenWeatherMapRequestInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/config/OpenWeatherMapConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/client/SpatialDataFeignServiceClient.java" />
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/config/FeignConfig.java" />
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/config/RestConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-core/1.3.6.RELEASE/spring-cloud-netflix-core-1.3.6.RELEASE.jar!/org/springframework/cloud/netflix/feign/FeignClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-core/1.3.6.RELEASE/spring-cloud-netflix-core-1.3.6.RELEASE-sources.jar!/org/springframework/cloud/netflix/feign/FeignClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/client/OpenWeatherMapClient.java">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/AccessRequestBody.java" />
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="79" selection-start-line="17" selection-start-column="35" selection-end-line="18" selection-end-column="79" />
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/Search.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96" />
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.17.RELEASE/spring-beans-4.3.17.RELEASE.jar!/org/springframework/beans/factory/annotation/InitDestroyAnnotationBeanPostProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="76" column="22" lean-forward="true" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/ifood-test-cloud-registry/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="32" column="12" selection-start-line="25" selection-start-column="3" selection-end-line="32" selection-end-column="12" />
+        <state relative-caret-position="213">
+          <caret line="18" selection-start-line="18" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-cloud-registry/src/main/java/br/com/jicecold/ifood/registry/RegistryApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="48" />
+        <state relative-caret-position="105">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/java/br/com/jicecold/ifood/gateway/GatewayCloudApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.17.RELEASE/spring-web-4.3.17.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-cloud-gateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/client/SpatialDataClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="88" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/OpenWeatherMapProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/commons/music/model/TrackResponseModel.java" />
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/commons/spatialdata/model/WeatherResponseModel.java" />
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/service/WeatherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/model/Weather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="3" selection-start-line="7" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/model/Weather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/RequestFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/LocationRequestFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/ResponseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -729,35 +796,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/controller/SuggestController.java">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/ResponseModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/MusicServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicContext.java" />
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/service/SuggestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="150">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicStrategy.java">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/provider/model/spotify/AccessToken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/config/RestConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="63" column="71" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/model/Weather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -765,70 +845,194 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-          <folding>
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/PartyMusic.java">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/SongsWeather.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#209#210#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/RockMusic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/converter/SearchToTrackConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/AbstractServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/provider/SpotifyLegacyProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/MusicServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/bind/annotation/RequestMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/weather/controller/WeatherController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="372">
           <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1093#1102#0" expanded="true" />
-            <element signature="e#1535#1544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-cloud-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/core/provider/openweathermap/client/OpenWeatherMapClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/java/br/com/jicecold/ifood/spatialdata/SpatialDataServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-spatial-data/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="32" column="11" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/service/SuggestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/converter/SearchToTrackConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/model/SpotifySearchApiFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/src/main/java/br/com/jicecold/ifood/architecture/generic/model/RequestFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/LocationRequestFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/aggregator/MusicWeatherAggregator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/controller/SuggestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spatialdata/client/SpatialDataClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -843,50 +1047,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/PopMusic.java">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/interceptor/SpotifyAccountInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="214">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding>
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/strategy/WeatherMusicConfig.java">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyApiFeignConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="334">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-cloud-gateway/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/config/SpotifyAccountFeignConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/suggest/model/SongsWeather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="230">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/aggregator/MusicWeatherAggregator.java">
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/interceptor/SpotifyApiInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="165">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyAccountFeignClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/client/SpotifyApiFeignClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/SpotifyDataGuard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-architecture/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ifood-test-service-music/src/main/java/br/com/jicecold/ifood/music/core/provider/spotify/SpotifyProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -896,9 +1146,80 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ifood-test-architecture</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2137931" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

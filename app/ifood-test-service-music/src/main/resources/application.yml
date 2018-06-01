@@ -2,6 +2,12 @@ spring:
   application:
     name: ifood-test-service-music
 
+# Log Level
+logging:
+  level:
+    root: INFO
+    br.com.jicecold.ifood: DEBUG
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -9,6 +15,26 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
+spotify:
+  security:
+    id: 4146471ddea843fb8db97bd77231ce48
+    secret: db8425e1a93f4dbe98a82ea6937f457c
+  account:
+    name: spotify-accounts
+    url: https://accounts.spotify.com
+    token:
+      path: /api/token
+      grantType: client_credentials
+  api:
+    name: spotify-api
+    url: https://api.spotify.com
+    search:
+      path: /v1/search
+      type: track
+      limit: 20
+      offset: 0
+
 server:
-  context-path: /music
+  servlet:
+    context-path: /music
   port: 9091
