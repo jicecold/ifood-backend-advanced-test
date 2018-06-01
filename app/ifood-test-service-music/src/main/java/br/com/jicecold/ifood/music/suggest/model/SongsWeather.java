@@ -1,22 +1,23 @@
-package br.com.jicecold.ifood.spatialdata.weather.model;
+package br.com.jicecold.ifood.music.suggest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Weather {
+public class SongsWeather {
 
-  private String cityName;
-  private String country;
+  private Double temp;
+  private String city;
   private Double latitude;
   private Double longitude;
-  private Double temp;
-  private Double tempMin;
-  private Double tempMax;
+  private String genre;
+  private List<String> songs;
 
 }

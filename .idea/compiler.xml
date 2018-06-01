@@ -7,11 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ifood-test-architecture" />
+        <module name="ifood-test-cloud-gateway" />
         <module name="ifood-test-cloud-registry" />
-        <module name="ifood-test-commons" />
         <module name="ifood-test-service-music" />
         <module name="ifood-test-service-spatial-data" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ifood-test-commons" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

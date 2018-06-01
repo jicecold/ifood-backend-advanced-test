@@ -1,8 +1,9 @@
 package br.com.jicecold.ifood.music.suggest.controller;
 
 import br.com.jicecold.ifood.architecture.generic.controller.BaseController;
-import br.com.jicecold.ifood.commons.music.model.TrackResponseModel;
-import br.com.jicecold.ifood.music.suggest.model.LocationRequestParamsFilter;
+import br.com.jicecold.ifood.architecture.generic.model.ResponseModel;
+import br.com.jicecold.ifood.music.suggest.model.LocationRequestFilter;
+import br.com.jicecold.ifood.music.suggest.model.SongsWeather;
 import br.com.jicecold.ifood.music.suggest.service.SuggestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,8 +18,11 @@ public class SuggestController extends BaseController {
   private SuggestService suggestService;
 
   @GetMapping("by-weather-location")
-  public TrackResponseModel suggestByLocation(LocationRequestParamsFilter filter) {
-    return suggestService.suggestByLocation(filter);
+  public ResponseModel<SongsWeather> suggestByLocation(LocationRequestFilter filter) {
+    SongsWeather data = suggestService.suggestByLocation(filter);
+    return ResponseModel.<SongsWeather>builder()
+        .content(data)
+        .build();
   }
 
 }

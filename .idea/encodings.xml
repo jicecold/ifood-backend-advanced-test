@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/ifood-test-architecture" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/ifood-test-cloud-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/ifood-test-cloud-registry" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/ifood-test-commons" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/ifood-test-service-music" charset="UTF-8" />
