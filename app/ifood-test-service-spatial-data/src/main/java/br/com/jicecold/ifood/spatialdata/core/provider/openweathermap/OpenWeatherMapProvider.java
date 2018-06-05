@@ -1,8 +1,8 @@
 package br.com.jicecold.ifood.spatialdata.core.provider.openweathermap;
 
+import br.com.jicecold.ifood.spatialdata.core.converter.OpenWeatherMapConverter;
 import br.com.jicecold.ifood.spatialdata.core.provider.openweathermap.client.OpenWeatherMapClient;
 import br.com.jicecold.ifood.spatialdata.core.provider.openweathermap.model.OpenWeatherMap;
-import br.com.jicecold.ifood.spatialdata.core.converter.OpenWeatherMapConverter;
 import br.com.jicecold.ifood.spatialdata.weather.model.Weather;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

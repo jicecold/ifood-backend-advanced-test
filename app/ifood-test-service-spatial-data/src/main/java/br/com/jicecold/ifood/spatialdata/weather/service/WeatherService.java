@@ -11,11 +11,11 @@ public class WeatherService {
   @Autowired
   private OpenWeatherMapProvider openWeatherMapProvider;
 
-  public Weather getWeatherByCityName(String name){
+  public Weather getWeatherByCityName(String name) {
     return openWeatherMapProvider.findWeatherByCityName(name);
   }
 
-  public Weather getWeatherByCoordinates(Double lat, Double lon){
+  public Weather getWeatherByCoordinates(Double lat, Double lon) {
     return openWeatherMapProvider.findWeatherByCoordinates(lat, lon);
   }
 }

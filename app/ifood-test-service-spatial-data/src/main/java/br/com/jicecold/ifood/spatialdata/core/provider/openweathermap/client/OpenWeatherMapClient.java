@@ -2,7 +2,6 @@ package br.com.jicecold.ifood.spatialdata.core.provider.openweathermap.client;
 
 import br.com.jicecold.ifood.spatialdata.core.provider.openweathermap.config.OpenWeatherMapConfig;
 import br.com.jicecold.ifood.spatialdata.core.provider.openweathermap.model.OpenWeatherMap;
-
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

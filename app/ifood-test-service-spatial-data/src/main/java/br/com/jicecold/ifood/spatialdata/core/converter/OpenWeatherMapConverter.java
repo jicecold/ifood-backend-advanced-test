@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class OpenWeatherMapConverter extends Converter<OpenWeatherMap, Weather> {
-  
+
   public OpenWeatherMapConverter() {
     super(source -> Weather.builder()
         .tempMin(source.getMain().getTempMin())

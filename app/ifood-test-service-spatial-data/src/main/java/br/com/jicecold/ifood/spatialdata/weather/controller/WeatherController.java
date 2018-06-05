@@ -18,7 +18,7 @@ public class WeatherController extends BaseController {
   private WeatherService weatherService;
 
   @GetMapping("city")
-  public ResponseModel<Weather> getWeatherByCityName(@RequestParam String name){
+  public ResponseModel<Weather> getWeatherByCityName(@RequestParam String name) {
     Weather data = weatherService.getWeatherByCityName(name);
     return ResponseModel.<Weather>builder()
         .content(data)
@@ -27,7 +27,7 @@ public class WeatherController extends BaseController {
 
   @GetMapping("coordinates")
   public ResponseModel<Weather> getWeatherByCoordinates(@RequestParam Double lat,
-                                                               @RequestParam Double lon){
+                                                        @RequestParam Double lon) {
     Weather data = weatherService.getWeatherByCoordinates(lat, lon);
     return ResponseModel.<Weather>builder()
         .content(data)
