@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(name = "${spotify.api.name}", url = "${spotify.api.url}",
     configuration = SpotifyApiFeignConfig.class,
-    fallback = SpotifyApiFeignFallback.class
-)
+    fallback = SpotifyApiFeignFallback.class)
 public interface SpotifyApiFeignClient {
 
   @GetMapping(value = "${spotify.api.search.path}")

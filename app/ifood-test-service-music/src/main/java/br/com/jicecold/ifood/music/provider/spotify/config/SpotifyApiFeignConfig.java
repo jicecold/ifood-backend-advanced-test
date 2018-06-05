@@ -1,21 +1,21 @@
 package br.com.jicecold.ifood.music.provider.spotify.config;
 
-import br.com.jicecold.ifood.music.provider.spotify.SpotifyDataGuard;
+import br.com.jicecold.ifood.music.provider.spotify.SpotifyContext;
 import br.com.jicecold.ifood.music.provider.spotify.interceptor.SpotifyApiInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 
 public class SpotifyApiFeignConfig {
 
-  private final SpotifyDataGuard spotifyDataGuard;
+  private final SpotifyContext spotifyContext;
 
   @Autowired
-  public SpotifyApiFeignConfig(SpotifyDataGuard spotifyDataGuard) {
-    this.spotifyDataGuard = spotifyDataGuard;
+  public SpotifyApiFeignConfig(SpotifyContext spotifyContext) {
+    this.spotifyContext = spotifyContext;
   }
 
   @Bean
   public SpotifyApiInterceptor spotifyAccountInterceptor() {
-    return new SpotifyApiInterceptor(spotifyDataGuard);
+    return new SpotifyApiInterceptor(spotifyContext);
   }
 }

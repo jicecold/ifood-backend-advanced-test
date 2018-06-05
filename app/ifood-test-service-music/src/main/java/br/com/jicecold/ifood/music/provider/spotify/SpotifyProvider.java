@@ -13,31 +13,31 @@ public class SpotifyProvider {
 
   private final SpotifyAccountFeignClient spotifyAccountFeignClient;
   private final SpotifyApiFeignClient spotifyApiFeignClient;
-  private final SpotifyDataGuard spotifyDataGuard;
+  private final SpotifyContext spotifyContext;
 
   @Autowired
   public SpotifyProvider(SpotifyAccountFeignClient spotifyAccountFeignClient,
                          SpotifyApiFeignClient spotifyApiFeignClient,
-                         SpotifyDataGuard spotifyDataGuard) {
+                         SpotifyContext spotifyContext) {
     this.spotifyAccountFeignClient = spotifyAccountFeignClient;
     this.spotifyApiFeignClient = spotifyApiFeignClient;
-    this.spotifyDataGuard = spotifyDataGuard;
+    this.spotifyContext = spotifyContext;
   }
 
   private void requestAccessToken() {
-    spotifyDataGuard.setToken(spotifyAccountFeignClient
-        .requestToken(format("grant_type=%s", spotifyDataGuard.getAccountGrantType())));
+    spotifyContext.setToken(spotifyAccountFeignClient
+        .requestToken(format("grant_type=%s", spotifyContext.getAccountGrantType())));
   }
 
   public Search searchTracksByMusicalGenre(String genre, Integer limit, Integer offset) {
 
-    if (!spotifyDataGuard.verifyAccessTokenIsValid())
+    if (!spotifyContext.verifyAccessTokenIsValid())
       requestAccessToken();
 
     return spotifyApiFeignClient.search(format("genre:%s", genre),
-        spotifyDataGuard.getSearchType(),
-        spotifyDataGuard.getOrDefaultSearchLimit(limit),
-        spotifyDataGuard.getOrDefaultSearchOffset(offset));
+        spotifyContext.getSearchType(),
+        spotifyContext.getOrDefaultSearchLimit(limit),
+        spotifyContext.getOrDefaultSearchOffset(offset));
   }
 
 }

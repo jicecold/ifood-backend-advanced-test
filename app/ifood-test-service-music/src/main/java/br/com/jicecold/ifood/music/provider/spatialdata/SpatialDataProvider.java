@@ -9,8 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class SpatialDataProvider {
 
+  private final SpatialDataFeignClient spatialDataFeignClient;
+
   @Autowired
-  private SpatialDataFeignClient spatialDataFeignClient;
+  public SpatialDataProvider(SpatialDataFeignClient spatialDataFeignClient) {
+    this.spatialDataFeignClient = spatialDataFeignClient;
+  }
 
   public Weather getWeatherByCityName(String cityName) {
     ResponseModel<Weather> responseModel = spatialDataFeignClient.getWeatherByCityName(cityName);

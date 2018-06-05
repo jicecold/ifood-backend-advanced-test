@@ -15,7 +15,7 @@ import static org.springframework.beans.factory.config.ConfigurableBeanFactory.S
 @Data
 @Component
 @Scope(SCOPE_SINGLETON)
-public class SpotifyDataGuard {
+public class SpotifyContext {
 
   @Value("${spotify.account.token.grantType}")
   private String accountGrantType;
@@ -31,7 +31,7 @@ public class SpotifyDataGuard {
 
   private AccessToken token;
 
-  public SpotifyDataGuard() {
+  public SpotifyContext() {
     this.token = new AccessToken();
   }
 

@@ -1,7 +1,7 @@
-package br.com.jicecold.ifood.spatialdata.core.converter;
+package br.com.jicecold.ifood.spatialdata.converter;
 
 import br.com.jicecold.ifood.architecture.generic.converter.Converter;
-import br.com.jicecold.ifood.spatialdata.core.provider.openweathermap.model.OpenWeatherMap;
+import br.com.jicecold.ifood.spatialdata.provider.openweathermap.model.OpenWeatherMap;
 import br.com.jicecold.ifood.spatialdata.weather.model.Weather;
 import org.springframework.stereotype.Component;
 
