@@ -18,7 +18,7 @@ feign:
       default:
         connectTimeout: 5000
         readTimeout: 5000
-        loggerLevel: full
+        loggerLevel: basic
 
 # Service Discovery Configutation
 eureka:
@@ -41,9 +41,9 @@ ribbon:
 logging:
   level:
     root: INFO
-    com.netflix.ribbon: DEBUG
-    com.netflix.hystrix: DEBUG
-    br.com.jicecold.ifood: DEBUG
+    #com.netflix.ribbon: DEBUG
+    #com.netflix.hystrix: DEBUG
+    #br.com.jicecold.ifood: DEBUG
 
 # Circuit Breaker Configuration
 hystrix:
@@ -71,5 +71,5 @@ spotify:
     search:
       path: /v1/search
       type: track
-      limit: 20
+      limit: 10
       offset: 0

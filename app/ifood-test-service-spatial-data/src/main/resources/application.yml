@@ -1,22 +1,63 @@
+# Spring Configuration
 spring:
   application:
     name: ifood-test-service-spatial-data
 
+# Server Configuration
+server:
+  servlet:
+    context-path: /spatial-data
+  port: ${PORT:9092}
+
+# Feign Client Configuration
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+# Service Discovery Configutation
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+
+# Proxy Configuration
+ribbon:
+  eureka:
+    enabled: true
+  MaxAutoRetries: 3
+  MaxAutoRetriesNextServer: 1
+  ReadTimeout: 1000
+
+# Log Level Configuration
+logging:
+  level:
+    root: INFO
+    #com.netflix.ribbon: DEBUG
+    #com.netflix.hystrix: DEBUG
+    #br.com.jicecold.ifood: DEBUG
+
+# Circuit Breaker Configuration
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+# Application Configuration
 openweathermap:
   name: openweathermap
   api:
     url: http://api.openweathermap.org/data/2.5/weather
     units: metric
     appid: 3445a9ae08df1a3117ae58bdfa7cda3d
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
-server:
-  servlet:
-    context-path: /spatial-data
-  port: 9092

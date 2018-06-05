@@ -5,26 +5,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 public class AccessToken {
 
   @JsonProperty("access_token")
-  String accessToken;
+  private String accessToken;
 
   @JsonProperty("token_type")
-  String tokenType;
+  private String tokenType;
 
   @JsonProperty("expires_in")
-  Integer expiresIn;
+  private Integer expiresIn;
 
   @JsonIgnore
-  ZonedDateTime dateOfRequest;
+  private LocalDateTime dateOfRequest;
 
   public AccessToken() {
-    this.dateOfRequest = ZonedDateTime.now();
+    this.dateOfRequest = LocalDateTime.now();
   }
 
 }

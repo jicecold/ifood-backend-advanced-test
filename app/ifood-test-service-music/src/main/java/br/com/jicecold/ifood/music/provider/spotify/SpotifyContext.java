@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 import static org.springframework.beans.factory.config.ConfigurableBeanFactory.SCOPE_SINGLETON;
@@ -36,10 +36,15 @@ public class SpotifyContext {
   }
 
   public boolean verifyAccessTokenIsValid() {
-    return (Objects.nonNull(this.token)
+    return Objects.nonNull(this.token)
         && StringUtils.isNoneBlank(this.token.getAccessToken(), this.token.getTokenType())
-        && Objects.nonNull(this.token.getExpiresIn())
-        && ((this.token.getDateOfRequest().getSecond() + this.token.getExpiresIn()) > ZonedDateTime.now().getSecond()));
+        && !tokenIsExpired();
+  }
+
+  private boolean tokenIsExpired() {
+    return Objects.nonNull(this.token.getExpiresIn())
+        && LocalDateTime.now().isAfter(this.token.getDateOfRequest()
+          .plusSeconds(this.token.getExpiresIn()));
   }
 
   public String getOrDefaultAccountGrantType(String accountGrantType) {
