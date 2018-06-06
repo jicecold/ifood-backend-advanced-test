@@ -1,0 +1,70 @@
+version: '3'
+services:
+  build-m2:
+    build: .
+    image: jicecold/maven-base-ifood:3.5.2-jdk-8
+    volumes:
+      - maven-repo:/root/.m2
+  
+  registry:
+    container_name: ifood-cloud-registry
+    build: ./ifood-test-cloud-registry  
+    image: jicecold/ifood-cloud-registry:1.0.0
+    ports:
+      - "8761:8761"
+    volumes:
+      - ./ifood-test-cloud-registry:/app
+      - maven-repo:/root/.m2
+    depends_on:
+      - build-m2
+    command: mvn spring-boot:run      
+
+  gateway:
+    container_name: ifood-cloud-gateway
+    build: ./ifood-test-cloud-gateway 
+    image: jicecold/ifood-cloud-gateway:1.0.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./ifood-test-cloud-gateway:/app
+      - maven-repo:/root/.m2
+    environment:
+      DISCOVERY_URL: http://registry:8761
+    depends_on:
+      - registry
+    command: mvn spring-boot:run
+
+  spatial-data:
+    container_name: ifood-service-spatial-data
+    build: ./ifood-test-service-spatial-data
+    image: jicecold/ifood-service-spatial-data:1.0.0
+    ports:
+      - "9092:9092"
+    volumes:
+      - ./ifood-test-service-spatial-data:/app
+      - maven-repo:/root/.m2
+    environment:
+      DISCOVERY_URL: http://registry:8761
+    depends_on:
+      - registry
+      - gateway
+    command: mvn spring-boot:run
+
+  music:
+    container_name: ifood-service-music
+    build: ./ifood-test-service-music
+    image: jicecold/ifood-service-music:1.0.0
+    ports:
+      - "9091:9091"
+    volumes:
+      - ./ifood-test-service-music:/app
+      - maven-repo:/root/.m2
+    environment:
+      DISCOVERY_URL: http://registry:8761
+    depends_on:
+      - registry
+      - gateway
+    command: mvn spring-boot:run    
+
+volumes:
+  maven-repo:

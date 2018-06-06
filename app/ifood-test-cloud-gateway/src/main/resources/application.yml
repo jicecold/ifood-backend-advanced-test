@@ -2,12 +2,15 @@ spring:
   application:
     name: gateway
 
+server:
+  port: ${PORT:9090}
+
 eureka:
   instance:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
 
 hystrix:
   command:
@@ -47,6 +50,3 @@ zuul:
       serviceId: ifood-test-service-spatial-data
       stripPrefix: false
       sensitiveHeaders:
-
-server:
-  port: 4000
