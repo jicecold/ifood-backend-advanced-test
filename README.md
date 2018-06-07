@@ -20,3 +20,35 @@ As this service will be a worldwide success, it must be prepared to be fault tol
 Use whatever language, tools and frameworks you feel comfortable to, and briefly elaborate on your solution, architecture details, choice of patterns and frameworks.
 
 Also, make it easy to deploy/run your service(s) locally (consider using some container/vm solution for this). Once done, share your code with us.
+ 
+# Solução
+
+Para a solução do desafio proposto, foi desenvolvida uma pequena plataforna RESTfull baseada em microserviços, utilizando as seguintes técnologias:
+
+* Java 8;
+* Maven 3;
+* Spring Framework
+   * Spring Boot (2.0.2);
+   * Spring Cloud (Finchley.RC1);
+* Docker (18.05);
+
+## Estrutura do Projeto
+
+O projeto foi dividido em módulos, conforme o esquema abaixo:
+
+
+    .
+    ├── app                                   
+    │   ├── ifood-test-architecture           # Módulo base que define pontos comuns entre os serviços.
+    │   ├── ifood-test-cloud-gateway          # Serviço que trabalha como proxy e load balancer.
+    │   ├── ifood-test-cloud-registry         # Serviço que trabalha como service discovery.
+    │   ├── ifood-test-service-music          # Serviço responsável pela entrega de musicas.
+    │   ├── ifood-test-service-spatial-data   # Serviço responsevel por entregadas dados geoespaciais.
+    │   ├── docker-compose.yml                # Arquivo que faz a "Orquestração" dos serviços;
+    │   ├── Dockerfile                        # Gera uma imagem base para conteineinerização do projeto.
+    │   └── pom.xml
+    └── README.md
+
+A idéia por trás do solução, foi criar um micro ambiente esalável e tolerante a falhas (com algumas ressalvas para não deixar a solução muito complexa, como a não redundancia do serviços de gateway e registry), além de demostrar os conhecimentos técnicos em torno das técnologias citadas. Para tanto a seguinte arquitetura foi desenvolvida, de acordo com o esquema a seguir:
+
+![alt text](doc/esquema1.png)
