@@ -147,9 +147,48 @@ Para as chamadas REST tambem é utilizada a implementação do [OpenFeign](https
 
 Se trata apenas de um módulo base para os demais microserviços, contento as dependencias necessários para o funcionamento basico do `Spring Boot` e `Spring Cloud`, alem dem alguns recursos e configurações basicas que se não implementados neste módulo poderiam se tornar redundantes em varios microservições.
 
+### Sistema de Circuit Breaker
+
+Em uma aplicação distribuída é comum que haja chamadas entre diversos servidores na rede. Diferente da chamada em memória, as chamadas remotas podem falhar ou ficarem pendentes se o host destino estiver indisponível até que um tempo limite seja atingido.
+
+Vale lembrar que a solução vem com o pattern de circuit breaker implementado em todas as chamadas `HTTP` que estão sendo realizadas pelo `Feign`. Logo, caso uma requisição começar a falhar, neste caso uma resposta padrão é enviada, evitando assim que o cliente não receba nada, neste ponto é digno de nota, ressaltar que esse não é o comportamento padrão da solução de circuit breaker, já que o "correto" seria devolver alguma informação em cache ou um erro conhecido, alem de armazenar métricas informando o local da falha. Contudo foi uma opção não fazer essa implementação tão profunda para não adiconar maior complexidade a solução.
+
+Para essa implementação está sendo utilizado o [Hystrix](https://github.com/Netflix/Hystrix), da `Netflix`.
+
+### Testes
+
+Como os testes não fazem parte explicita no requisito desse desafio, foram realizados testes unitários simples que correpondem as regras de negócio da aplicação, nada além disso.
+
+# Executando a Solução
+
+> Finalmente... :D
+
+Graças ao docker a execução é muito simples... Basta acessar via linha de comando a pasta `app` e executar o comando:
+
+```shell
+> docker-compose -p ifood up
+```
+
+Isso irá gerar uma imagem com todas as dependencias do projeto e em seguida iniciará todos os serviços necessários.
+> A primeira execução pode levar pelo menos **5 minutos** para finalizar a build devido ao download de dependencias do maven.
+
+Caso queira subir mais de uma instancia de um dos serviços `music` ou `spatial-data`, execute o comando da seguinte forma:
+
+```shell
+> docker-compose -p ifood  up --scale music=2 spatial-data=2
+```
+
+Esse comando deve subir instancias de ambos os serviços de acordo com o valor especificado na propriedade `--sacale [SERVICE=NUBER]`. Lembro que os serviços de cloud (Gateway e Registry), não foram configurados para ter mais de uma instância, então caso o faça, deve ocorrer problemas na execução.
+
+> Lembre-se de ter o [Docker](https://docs.docker.com/install/) e o [Docker Compose v3+](https://docs.docker.com/compose/install/) instalado na maquina que irá executar a solução.
+
+
+
 ## Referências:
-* Docker - https://www.docker.com/docker-community
+* Docker - https://docs.docker.com/install/overview/
+* Docker Compose - https://docs.docker.com/compose/overview/
 * Eureka - https://github.com/Netflix/eureka
+* Hystrix - https://github.com/Netflix/Hystrix
 * Netflix OSS - https://netflix.github.io/
 * OpenFeign - https://github.com/OpenFeign/feign
 * OpenWeatherMaps - https://openweathermap.org/
