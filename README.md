@@ -49,6 +49,30 @@ O projeto foi dividido em módulos, conforme o esquema abaixo:
     │   └── pom.xml
     └── README.md
 
-A idéia por trás do solução, foi criar um micro ambiente esalável e tolerante a falhas (com algumas ressalvas para não deixar a solução muito complexa, como a não redundancia do serviços de gateway e registry), além de demostrar os conhecimentos técnicos em torno das técnologias citadas. Para tanto a seguinte arquitetura foi desenvolvida, de acordo com o esquema a seguir:
+A idéia por trás do solução, foi criar um pequeno ambiente esalável e tolerante a falhas **(com algumas ressalvas para não deixar a solução muito complexa, como a não redundancia do serviços de gateway e registry)**, além de demostrar os conhecimentos técnicos em torno das técnologias citadas. Para tanto, a seguinte arquitetura foi desenvolvida, de acordo com o esquema a seguir:
 
 ![alt text](doc/esquema1.png)
+
+### Módulo Gateway
+------------------
+
+Como a solução proposta pode apresentar diversas instacias de microserviços rodando em diferentes portas ou contextos, foi feita a opção por implementar um módulo de **Gateway**, que funciona basicamente como meio de entrada e roteamento para um determinado microserviço, respeitando as rotas configuradas no arquivo `application.yml`. Por fim, o objetivo é que todo o trafego entre a `plataforma` e o `client`, passe pelo módulo de Gateway.
+
+Como exeplificado no esquema anterior, o gateway irá receber a requisição e consultar no `Service Discovery`, neste caso o serviço chamado `Registry`, por qual instancia de microserviço registrado, reposnde aquela determinada rota.
+
+Para este exemplo, está sendo utilizado a solução do pacote [Netflix OSS](https://netflix.github.io/) , chamado [Zuul](https://github.com/Netflix/zuul) como implementação do módulo de gateway.
+
+### Módulo Registry (Service Discovery)
+---------------------------------------
+
+O `Service Discovery` é um dos principios aplicados em arquiteturas basedas em microserviços, cujo o objetivo é identificar e registrar informações das diferentes instancias de serviços dentro da aquitetura, como por exemplo, quais são os endereços de `hosts` e `porta`, nos quais esses serviços estão respondendo, bem como seu `status`.
+
+Para esta solução, o conceito se aplica devido as multiplas instacias dos serviços de `music` e `spatial-data`, que podem assumir endereços de IP e Porta dinamicamente, o que pode justificar a implementação desse recurso.
+
+Neste caso, o [Eureka](https://github.com/Netflix/eureka), que também faz parte da Stack de soluções da `Netflix OSS`, é utilizado como implementação de `Service Discovery`.
+
+## Referências:
+* Eureka - https://github.com/Netflix/eureka
+* Netflix OSS - https://netflix.github.io/
+* Spring Cloud Netflix - https://cloud.spring.io/spring-cloud-netflix/
+* Zuul - https://github.com/Netflix/zuul
