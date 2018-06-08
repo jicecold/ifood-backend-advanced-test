@@ -31,7 +31,7 @@ public class SpotifyProvider {
 
   public Search searchTracksByMusicalGenre(String genre, Integer limit, Integer offset) {
 
-    if (!spotifyContext.verifyAccessTokenIsValid())
+    if (!spotifyContext.verifyIfAccessTokenIsValid())
       requestAccessToken();
 
     return spotifyApiFeignClient.search(format("genre:%s", genre),

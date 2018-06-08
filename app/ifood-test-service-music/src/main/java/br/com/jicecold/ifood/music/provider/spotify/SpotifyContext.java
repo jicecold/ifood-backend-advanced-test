@@ -35,16 +35,13 @@ public class SpotifyContext {
     this.token = new AccessToken();
   }
 
-  public boolean verifyAccessTokenIsValid() {
+  public boolean verifyIfAccessTokenIsValid() {
     return Objects.nonNull(this.token)
         && StringUtils.isNoneBlank(this.token.getAccessToken(), this.token.getTokenType())
-        && !tokenIsExpired();
-  }
-
-  private boolean tokenIsExpired() {
-    return Objects.nonNull(this.token.getExpiresIn())
-        && LocalDateTime.now().isAfter(this.token.getDateOfRequest()
-          .plusSeconds(this.token.getExpiresIn()));
+        && Objects.nonNull(this.token.getExpiresIn())
+        && LocalDateTime.now()
+            .isBefore(this.token.getDateOfRequest()
+                .plusSeconds(this.token.getExpiresIn()));
   }
 
   public String getOrDefaultAccountGrantType(String accountGrantType) {

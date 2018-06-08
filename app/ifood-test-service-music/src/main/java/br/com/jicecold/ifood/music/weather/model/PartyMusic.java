@@ -2,7 +2,8 @@ package br.com.jicecold.ifood.music.weather.model;
 
 public class PartyMusic implements GenreMusic {
 
-  public static final String GENRE = "party";
+  // Quando o genero musical é Party o spotify não retorna resultados, então optei por electro para este caso
+  public static final String GENRE = "electro";
   private Double min;
   private Double max;
 

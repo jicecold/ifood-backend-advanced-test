@@ -182,7 +182,7 @@ Esse comando deve subir instancias de ambos os serviços de acordo com o valor e
 
 > Lembre-se de ter o [Docker](https://docs.docker.com/install/) e o [Docker Compose v3+](https://docs.docker.com/compose/install/) instalado na maquina que irá executar a solução.
 
-## Chegando se os serviços estão em execução
+## Checando se os serviços estão em execução
 
 Para isso acesse seu navegador e busque pela url `localhost:8761`, caso consiga acessa-la, a pagina do Eureka deve ser exibida, como mostra a imagem a seguir:
 
@@ -201,14 +201,14 @@ Como mostra a próxima imagem:
 
 ![Postman 1](doc/postman1.jpg)
 
-## Obrigado
+# Obrigado
 
 > Vitória... :P
 
-Foi um desafio bem elaborado, que me fez pensar em uma solução na integração entre API(s) e serviços baseado na arquitetura de microserviços. Acredito que essa solução satisfaça as diretrizes do requisito do desafio.
+Foi um desafio bem elaborado, que me fez pensar em uma solução na integração entre API(s) e serviços baseado na arquitetura de microserviços. Acredito que essa solução satisfaça as diretrizes do requisito.
 Agradeço a oportunidade.
 
-## Referências:
+# Referências:
 * Docker - https://docs.docker.com/install/overview/
 * Docker Compose - https://docs.docker.com/compose/overview/
 * Eureka - https://github.com/Netflix/eureka
