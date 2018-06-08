@@ -54,7 +54,6 @@ A idéia por trás do solução, foi criar um pequeno ambiente esalável e toler
 ![alt text](doc/esquema1.png)
 
 ### Módulo Gateway
-------------------
 
 Como a solução proposta pode apresentar diversas instacias de microserviços rodando em diferentes portas ou contextos, foi feita a opção por implementar um módulo de **Gateway**, que funciona basicamente como meio de entrada e roteamento para um determinado microserviço, respeitando as rotas configuradas no arquivo `application.yml`. Por fim, o objetivo é que todo o trafego entre a `plataforma` e o `client`, passe pelo módulo de Gateway.
 
@@ -63,7 +62,6 @@ Como exeplificado no esquema anterior, o gateway irá receber a requisição e c
 Para este exemplo, está sendo utilizado a solução do pacote [Netflix OSS](https://netflix.github.io/) , chamado [Zuul](https://github.com/Netflix/zuul) como implementação do módulo de gateway.
 
 ### Módulo Registry (Service Discovery)
----------------------------------------
 
 O `Service Discovery` é um dos principios aplicados em arquiteturas basedas em microserviços, cujo o objetivo é identificar e registrar informações das diferentes instancias de serviços dentro da aquitetura, como por exemplo, quais são os endereços de `hosts` e `porta`, nos quais esses serviços estão respondendo, bem como seu `status`.
 
@@ -71,8 +69,55 @@ Para esta solução, o conceito se aplica devido as multiplas instacias dos serv
 
 Neste caso, o [Eureka](https://github.com/Netflix/eureka), que também faz parte da Stack de soluções da `Netflix OSS`, é utilizado como implementação de `Service Discovery`.
 
+### Módulo Music
+
+Este é o serviço responsável por receber a requisição do cliente, por meio de uma API RESTfull, neste caso uma sugestão de musicas de acordo com o clima e localização, para isso, o serviço se comunica com serviço de dados geoespaciais, chamado de `spatial-data`, que tem como provedor de dados o `OpenWeatherMaps` e com o `Spotify`, que é o provedor de acesso as musicas, devolvendo então uma lista de musicas de acordo com o gerero musical e a temperatura do local em questão.
+
+O fluxo para realizar essas operações pode passar pelas seguintes API(s):
+* localhost:9090/music/weather/location?city=Timbuktu
+* localhost:9090/music/weather/location?latitude=71.7069&longitude=-42.6043
+
+Sendo que, ao realizar uma dessas requisições através do método `HTTP GET`, ocorre os seguintes passos:
+
+    1 - O serviço "music" solicita a temperatura do local informado para o serviço "spatial-data";
+    2 - Ao receber a resposta o servico "music", por meio das regras de negócio estabelecidas, determina o genero musical;
+    3 - Que em seguida, solicita ao "Spotify", uma lista de musicas para o genero escolhido;
+    4 - E, por fim, faz a agregação dos dados necessários, devolvendo uma lista de musicas sugeridas para o cliente.
+
+> Spotify: [Search Endpoint](https://developer.spotify.com/documentation/web-api/reference/search/search/)
+
+**Exemplo:**
+
+``` json
+{
+  "content": {
+    "temp": -2.47,
+    "city": "Greenland",
+    "country": "GL",
+    "latitude": 71.71,
+    "longitude": -42.6,
+    "genre": "classical",
+    "songs": [
+      "Unaccompanied Cello Suite No. 1 in G Major, BWV 1007: I. Prélude",
+      "Sonata No. 14 \"Moonlight\" in C-Sharp Minor\", Op. 27 No. 2: I. Adagio sostenuto",
+      "Suite bergamasque: Suite bergamasque: III. Clair de lune. Andante très expressif",
+      "Requiem: Lacrimosa",
+      "Opening",
+      "Gnossienne No.1 (Arr. Kleynjans)",
+      "Berceuse In D Flat, Op.57",
+      "Piano Concerto No. 21 in C Major, K. 467 \"Elvira Madigan\": II. Andante",
+      "Nocturne, Op. posth. in C-Sharp Minor: Lento",
+      "Claire De Lune"
+    ]
+  }
+}
+```
+
+Para efetuar as requisições, está sendo utilizado o [OpenFeign](https://github.com/OpenFeign/feign), como `client http`.
+
 ## Referências:
 * Eureka - https://github.com/Netflix/eureka
 * Netflix OSS - https://netflix.github.io/
+* OpenFeign - https://github.com/OpenFeign/feign
 * Spring Cloud Netflix - https://cloud.spring.io/spring-cloud-netflix/
 * Zuul - https://github.com/Netflix/zuul
