@@ -18,12 +18,6 @@ services:
       - build-m2
     command: mvn spring-boot:run
 
-  wait-service:
-    image: dadarek/wait-for-dependencies
-    depends_on:
-      - registry 
-    command: registry:8761   
-
   gateway:
     build: ./ifood-test-cloud-gateway 
     image: jicecold/ifood-cloud-gateway:1.0.0
@@ -35,7 +29,7 @@ services:
     environment:
       DISCOVERY_URL: http://registry:8761
     depends_on:
-      - wait-service
+      - registry
     command: mvn spring-boot:run
 
   spatial-data:
@@ -49,7 +43,7 @@ services:
     environment:
       DISCOVERY_URL: http://registry:8761
     depends_on:
-      - wait-service
+      - registry
     command: mvn spring-boot:run
 
   music:
@@ -63,7 +57,7 @@ services:
     environment:
       DISCOVERY_URL: http://registry:8761
     depends_on:
-      - wait-service
+      - registry
     command: mvn spring-boot:run    
 
 volumes:

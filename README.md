@@ -43,27 +43,27 @@ O projeto foi dividido em módulos, conforme o esquema abaixo:
     │   ├── ifood-test-cloud-gateway          # Serviço que trabalha como proxy e load balancer.
     │   ├── ifood-test-cloud-registry         # Serviço que trabalha como service discovery.
     │   ├── ifood-test-service-music          # Serviço responsável pela entrega de musicas.
-    │   ├── ifood-test-service-spatial-data   # Serviço responsevel por entregadas dados geoespaciais.
+    │   ├── ifood-test-service-spatial-data   # Serviço responsável por entregar dados geoespaciais.
     │   ├── docker-compose.yml                # Arquivo que faz a "Orquestração" dos serviços;
     │   ├── Dockerfile                        # Gera uma imagem base para conteineinerização do projeto.
     │   └── pom.xml
     └── README.md
 
-A idéia por trás do solução, foi criar um pequeno ambiente esalável e tolerante a falhas **(com algumas ressalvas para não deixar a solução muito complexa, como a não redundancia do serviços de gateway e registry)**, além de demostrar os conhecimentos técnicos em torno das técnologias citadas. Para tanto, a seguinte arquitetura foi desenvolvida, de acordo com o esquema a seguir:
+A idéia por trás do solução, foi criar um pequeno ambiente escalável e tolerante a falhas **(com algumas ressalvas para não deixar a solução muito complexa, como a não redundancia do serviços de gateway e registry)**, além de demostrar os conhecimentos técnicos em torno das técnologias citadas. Para tanto, a seguinte arquitetura foi desenvolvida, de acordo com o esquema a seguir:
 
-![alt text](doc/esquema1.png)
+![Esquema 1](doc/esquema1.png)
 
 ### Módulo Gateway
 
-Como a solução proposta pode apresentar diversas instacias de microserviços rodando em diferentes portas ou contextos, foi feita a opção por implementar um módulo de **Gateway**, que funciona basicamente como meio de entrada e roteamento para um determinado microserviço, respeitando as rotas configuradas no arquivo `application.yml`. Por fim, o objetivo é que todo o trafego entre a `plataforma` e o `client`, passe pelo módulo de Gateway.
+Como a solução proposta pode apresentar diversas instacias de microserviços rodando em diferentes hosts ou portas, foi feita a opção por implementar um módulo de **Gateway**, que funciona basicamente como meio de entrada e roteamento para um determinado microserviço, respeitando as rotas configuradas no arquivo `application.yml`. Por fim, o objetivo é que todo o trafego entre a `plataforma` e o `client`, passe pelo módulo de Gateway.
 
-Como exeplificado no esquema anterior, o gateway irá receber a requisição e consultar no `Service Discovery`, neste caso o serviço chamado `Registry`, por qual instancia de microserviço registrado, reposnde aquela determinada rota.
+Como exeplificado no esquema anterior, o gateway irá receber a requisição e consultar no `Service Discovery`, neste caso o serviço chamado `Registry`, por qual instancia de serviço coresponde à aquela determinada rota.
 
 Para este exemplo, está sendo utilizado a solução do pacote [Netflix OSS](https://netflix.github.io/) , chamado [Zuul](https://github.com/Netflix/zuul) como implementação do módulo de gateway.
 
 ### Módulo Registry (Service Discovery)
 
-O `Service Discovery` é um dos principios aplicados em arquiteturas basedas em microserviços, cujo o objetivo é identificar e registrar informações das diferentes instancias de serviços dentro da aquitetura, como por exemplo, quais são os endereços de `hosts` e `porta`, nos quais esses serviços estão respondendo, bem como seu `status`.
+O `Service Discovery` é um dos principios aplicados em arquiteturas basedas em microserviços, cujo o objetivo é identificar e registrar informações das diferentes instancias de serviços dentro da aquitetura, como por exemplo, quais são os endereços de `hosts` e `porta`, nos quais esses serviços estão respondendo, bem como o seu `status`.
 
 Para esta solução, o conceito se aplica devido as multiplas instacias dos serviços de `music` e `spatial-data`, que podem assumir endereços de IP e Porta dinamicamente, o que pode justificar a implementação desse recurso.
 
@@ -182,7 +182,31 @@ Esse comando deve subir instancias de ambos os serviços de acordo com o valor e
 
 > Lembre-se de ter o [Docker](https://docs.docker.com/install/) e o [Docker Compose v3+](https://docs.docker.com/compose/install/) instalado na maquina que irá executar a solução.
 
+## Chegando se os serviços estão em execução
 
+Para isso acesse seu navegador e busque pela url `localhost:8761`, caso consiga acessa-la, a pagina do Eureka deve ser exibida, como mostra a imagem a seguir:
+
+![Eureka 1](doc/eureka1.jpg)
+
+Se tudo estiver `OK` os serviços deve aparecer como na imagem.
+
+## Fazendo a requisição na API
+
+Para realizar a requisição na API, foi utilizado o Postman. A solicitação é muito simples, basta escolher umas das URL(s), da API de `music`, por meio de um `HTTP GET`.
+
+    localhost:9090/music/weather/location?city=Timbuktu
+    localhost:9090/music/weather/location?latitude=71.7069&longitude=-42.6043
+
+Como mostra a próxima imagem:
+
+![Postman 1](doc/postman1.jpg)
+
+## Obrigado
+
+> Vitória... :P
+
+Foi um desafio bem elaborado, que me fez pensar em uma solução na integração entre API(s) e serviços baseado na arquitetura de microserviços. Acredito que essa solução satisfaça as diretrizes do requisito do desafio.
+Agradeço a oportunidade.
 
 ## Referências:
 * Docker - https://docs.docker.com/install/overview/
