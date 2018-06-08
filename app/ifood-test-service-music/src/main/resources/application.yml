@@ -1,0 +1,75 @@
+# Spring Configuration
+spring:
+  application:
+    name: ifood-test-service-music
+
+# Server Configuration
+server:
+  servlet:
+    context-path: /music
+  port: ${PORT:9091}
+
+# Feign Client Configuration
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+# Service Discovery Configutation
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+
+# Proxy Configuration
+ribbon:
+  eureka:
+    enabled: true
+  MaxAutoRetries: 3
+  MaxAutoRetriesNextServer: 1
+  ReadTimeout: 1000
+
+# Log Level Configuration
+logging:
+  level:
+    root: INFO
+    #com.netflix.ribbon: DEBUG
+    #com.netflix.hystrix: DEBUG
+    #br.com.jicecold.ifood: DEBUG
+
+# Circuit Breaker Configuration
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+# Application Configuration
+spotify:
+  security:
+    id: 4146471ddea843fb8db97bd77231ce48
+    secret: db8425e1a93f4dbe98a82ea6937f457c
+  account:
+    name: spotify-accounts
+    url: https://accounts.spotify.com
+    token:
+      path: /api/token
+      grantType: client_credentials
+  api:
+    name: spotify-api
+    url: https://api.spotify.com
+    search:
+      path: /v1/search
+      type: track
+      limit: 10
+      offset: 0
