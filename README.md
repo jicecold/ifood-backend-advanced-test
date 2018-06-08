@@ -86,7 +86,7 @@ Sendo que, ao realizar uma dessas requisições através do método `HTTP GET`, 
 
 > Spotify: [Search Endpoint](https://developer.spotify.com/documentation/web-api/reference/search/search/)
 
-**Exemplo:**
+**Exemplo de Retorno:**
 
 ``` json
 {
@@ -113,11 +113,50 @@ Sendo que, ao realizar uma dessas requisições através do método `HTTP GET`, 
 }
 ```
 
-Para efetuar as requisições, está sendo utilizado o [OpenFeign](https://github.com/OpenFeign/feign), como `client http`.
+Para efetuar as requisições, está sendo utilizado o [OpenFeign](https://github.com/OpenFeign/feign), como `client http`, sendo o responsavel por se comunicar e consumir as demais API(s).
+
+### Módulo Spatial-Data
+
+Este é o serviço responsável por prover as informações pertinentes ao clima de acordo com a localização informada. Ele trabalha independente do módulo `music` e pode ser utilizado diretamente através de suas API(s):
+* localhost:9092/spatial-data/weather/city?name=Campinas
+* localhost:9092/spatial-data/weather/coordinates?lat=37.39&lon=-122.09
+
+O fluxo de operação, diferente do serviço de `music`, não tem complexidade que corresponde as regras de negócio, seu trabalho fica apenas para na consulta de informaçõe no provedor `OpenWeatherMaps` e no resumo dessas desses dados, afim de facilitar seu uso para aquilo que é realmente pertinente para a solução. Abaixo, segue o resultado ao consultas uma das duas API(s) anteriores.
+
+> OpenWeatherMaps: [API](https://openweathermap.org/api)
+
+**Exemplo de Retorno**
+
+```json
+{
+  "content": {
+    "cityName": "Campinas",
+    "country": "BR",
+    "latitude": -22.91,
+    "longitude": -47.06,
+    "temp": 19,
+    "tempMin": 19,
+    "tempMax": 19
+  }
+}
+```
+
+Para as chamadas REST tambem é utilizada a implementação do [OpenFeign](https://github.com/OpenFeign/feign)
+
+### Módulo Architeture
+
+Se trata apenas de um módulo base para os demais microserviços, contento as dependencias necessários para o funcionamento basico do `Spring Boot` e `Spring Cloud`, alem dem alguns recursos e configurações basicas que se não implementados neste módulo poderiam se tornar redundantes em varios microservições.
 
 ## Referências:
+* Docker - https://www.docker.com/docker-community
 * Eureka - https://github.com/Netflix/eureka
 * Netflix OSS - https://netflix.github.io/
 * OpenFeign - https://github.com/OpenFeign/feign
+* OpenWeatherMaps - https://openweathermap.org/
+* Spring Boot - https://spring.io/projects/spring-boot
+* Spring Boot Docs - https://docs.spring.io/spring-boot/docs/2.0.2.RELEASE/reference/htmlsingle/
+* Spring Cloud - https://projects.spring.io/spring-cloud/
+* Spring Cloud Docs - http://cloud.spring.io/spring-cloud-static/Finchley.RC2/single/spring-cloud.html
 * Spring Cloud Netflix - https://cloud.spring.io/spring-cloud-netflix/
+* Spotify - https://developer.spotify.com/
 * Zuul - https://github.com/Netflix/zuul
